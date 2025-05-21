@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { projects } from "../data/data.json";
+import { projects } from "../data/data.js";
 
 export default function ProjectsPage() {
     const videoRefs = useRef([]);
@@ -55,9 +55,11 @@ export default function ProjectsPage() {
                                     preload="auto"
                                     className="w-full h-auto object-cover"
                                 />
-                                <h3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-xl font-sohne z-10 pointer-events-none text-center">
-                                    {project.name}
-                                </h3>
+                                <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 text-white text-xl z-10 pointer-events-none text-justify">
+                                    <p>{project.year}</p>
+                                    <h3 className="text-4xl">{project.name}</h3>
+                                    <p>{project.by}</p>
+                                </div>
                             </div>
                         </Link>
                     </div>
