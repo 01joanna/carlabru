@@ -86,7 +86,7 @@ export const projects = [
             "director": "Frank Lucas",
             "producer": "Japonica fiLMS",
             "art": "Carla Bru",
-            "image": "/assets/pesos/IMG_3718.png",
+            "image": "/assets/pesos/IMG_3714.PNG",
             "images": [
                 {
                     "src": "/assets/proyecto-ruina/3.png",
