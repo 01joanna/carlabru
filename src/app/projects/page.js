@@ -19,7 +19,7 @@ export default function ProjectsPage() {
     ];
 
     return (
-        <section className="py-20 mx-20 flex flex-col gap-20">
+        <section className="py-20 mx-5 flex flex-col gap-20">
             <div className="flex justify-center font-helvetica tracking-wider gap-20">
                 {categories.map(category => (
                     <button
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                     </button>
                 ))}
             </div>
-            <div className="columns-1 row-span-full md:columns-2 gap-6 space-y-6">
+            <div className="columns-1 row-span-full md:columns-2 gap-3 space-y-6">
                 <AnimatePresence mode="wait">
                     {filtered.map((project, index) => (
                         <motion.div
