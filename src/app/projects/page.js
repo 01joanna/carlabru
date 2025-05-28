@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                     </button>
                 ))}
             </div>
-            <div className="columns-1 row-span-full md:columns-3 gap-6 space-y-6">
+            <div className="columns-1 row-span-full md:columns-2 gap-6 space-y-6">
                 <AnimatePresence mode="wait">
                     {filtered.map((project, index) => (
                         <motion.div
