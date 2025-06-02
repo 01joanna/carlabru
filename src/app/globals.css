@@ -21,6 +21,48 @@
   src: url('/fonts/SohneMono-Leicht.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'LT Superior Black';
+  src: url('/fonts/LTSuperior-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LT Superior Light';
+  src: url('/fonts/LTSuperior-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LT Superior Medium';
+  src: url('/fonts/LTSuperior-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LT Superior Regular';
+  src: url('/fonts/LTSuperior-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LT Superior Thin';
+  src: url('/fonts/LTSuperior-Thin.otf') format('opentype');
+} 
+
+@font-face {
+  font-family: 'LT Superior Extra Light';
+  src: url('/fonts/LTSuperior-ExtraLight.otf') format('opentype');
+} 
+
+@font-face {
+  font-family: 'LT Superior Extra Bold';
+  src: url('/fonts/LTSuperior-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'LT Superior Bold';
+  src: url('/fonts/LTSuperior-Bold.otf') format('opentype');
+} 
+
+
+
 
 
 :root {
@@ -33,6 +75,15 @@
   --font-sohneExtra: 'Sohne Extraleicht', sans-serif;
   --font-sohneLeicht: 'Sohne Leicht', sans-serif;
   --font-sohnekraftig: 'Sohne Kräftig', sans-serif;
+  --font-ltBlack: 'LT Superior Black', sans-serif;
+  --font-ltLight: 'LT Superior Light', sans-serif;
+  --font-ltMedium: 'LT Superior Medium', sans-serif;
+  --font-ltRegular: 'LT Superior Regular', sans-serif;
+  --font-ltThin: 'LT Superior Thin', sans-serif;
+  --font-ltExtraLight: 'LT Superior Extra Light', sans-serif;
+  --font-ltExtraBold: 'LT Superior Extra Bold', sans-serif;
+  --font-ltBold: 'LT Superior Bold', sans-serif;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -59,7 +110,8 @@ a {
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Previene scroll horizontal accidental */
+  overflow-x: hidden;
 }

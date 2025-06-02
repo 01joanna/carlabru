@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import "./globals.css";
 import Header from "./components/Header/Header";
+import AltHeader from "./components/AltHeader/AltHeader";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -10,7 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="overflow-visible bg-white">
-        <Header />
+        {/* <Header /> */}
+        <AltHeader />
 
         <AnimatePresence mode="wait">
           <motion.div
