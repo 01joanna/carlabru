@@ -1,7 +1,7 @@
 export default function AltHeader() {
     return (
         <header
-            className="z-10 w-full h-auto">
+            className="z-10 w-full h-auto absolute">
                 <div className="bg-black">
                     <nav className="">
                         <ul className="flex px-10 py-1 justify-end gap-10 uppercase text-xs tracking-wider bg-transparent text-white">

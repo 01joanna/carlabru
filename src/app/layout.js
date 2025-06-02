@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="overflow-visible bg-white">
+      <body className="overflow-visible bg-white relative">
         {/* <Header /> */}
         <AltHeader />
 
