@@ -6,7 +6,7 @@ import { projects } from "../../data/data.js";
 
 export default function ProjectIntro() {
     return (
-        <section>
+        <section className="">
             {projects.map((project) => (
                 <Link
                     key={project.id}

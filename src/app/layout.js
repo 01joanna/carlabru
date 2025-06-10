@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import "./globals.css";
-import Header from "./components/Header/Header";
+import Header from "./components/Home/Header/Header";
 import AltHeader from "./components/AltHeader/AltHeader";
 
 export default function RootLayout({ children }) {

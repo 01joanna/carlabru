@@ -1,13 +1,28 @@
-import Image from "next/image";
-import {projects} from "./data/data.js"
-import ProjectIntro from "./components/Project/ProjectIntro.jsx";
-import Home from "./components/Home/Home.jsx";
+'use client'
+import { useEffect } from "react";
+import Navigation from "./components/Navigation/Navigation.jsx";
 
 export default function Page() {
+
+  useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, []);
+
+
   return (
-    <section className="">
-      {/* <ProjectIntro /> */}
-      <Home />
-    </section>
-  );
+      <>
+        <Navigation />
+      <section className="relative w-screen h-screen overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-screen -z-10">
+          <iframe
+            src="https://player.vimeo.com/video/882106664?background=1&autoplay=1&loop=1&muted=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            className="w-full h-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-150"
+          ></iframe>
+        </div>
+      </section>
+      </>
+      );
 }

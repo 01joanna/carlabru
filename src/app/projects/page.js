@@ -19,7 +19,7 @@ export default function ProjectsPage() {
     ];
 
     return (
-        <section className="py-20 mx-5 flex flex-col gap-20">
+        <section className=" w-1/2 py-20 px-10 flex flex-col gap-20 bg-black text-white">
             <div className="flex justify-center font-helvetica tracking-wider gap-20">
                 {categories.map(category => (
                     <button

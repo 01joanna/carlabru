@@ -2,26 +2,6 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 
 @font-face {
-  font-family: 'Sohne Buch';
-  src: url('/fonts/SohneMono-Buch.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Sohne Extraleicht';
-  src: url('/fonts/SohneMono-Extraleicht.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Sohne Kräftig';
-  src: url('/fonts/SohneMono-Kräftig.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Sohne Leicht';
-  src: url('/fonts/SohneMono-Leicht.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'LT Superior Black';
   src: url('/fonts/LTSuperior-Black.otf') format('opentype');
 }
@@ -61,6 +41,35 @@
   src: url('/fonts/LTSuperior-Bold.otf') format('opentype');
 } 
 
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Bold';
+  src: url('/fonts/OatmealProTRIAL-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Regular';
+  src: url('/fonts/OatmealProTRIAL-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Light';
+  src: url('/fonts/OatmealProTRIAL-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Medium';
+  src: url('/fonts/OatmealProTRIAL-Medium.otf') format('opentype');
+} 
+
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Extra Light';
+  src: url('/fonts/OatmealProTRIAL-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Oatmeal Pro TRIAL Semi Bold';
+  src: url('/fonts/OatmealProTRIAL-SemiBold.otf') format('opentype');
+}
 
 
 
@@ -71,10 +80,6 @@
 }
 
 @theme inline {
-  --font-sohne: 'Sohne Buch', sans-serif;
-  --font-sohneExtra: 'Sohne Extraleicht', sans-serif;
-  --font-sohneLeicht: 'Sohne Leicht', sans-serif;
-  --font-sohnekraftig: 'Sohne Kräftig', sans-serif;
   --font-ltBlack: 'LT Superior Black', sans-serif;
   --font-ltLight: 'LT Superior Light', sans-serif;
   --font-ltMedium: 'LT Superior Medium', sans-serif;
@@ -83,6 +88,14 @@
   --font-ltExtraLight: 'LT Superior Extra Light', sans-serif;
   --font-ltExtraBold: 'LT Superior Extra Bold', sans-serif;
   --font-ltBold: 'LT Superior Bold', sans-serif;
+
+  --font-oatmealBold: 'Oatmeal Pro TRIAL Bold', sans-serif;
+  --font-oatmealRegular: 'Oatmeal Pro TRIAL Regular', sans-serif;
+  --font-oatmealLight: 'Oatmeal Pro TRIAL Light', sans-serif;
+  --font-oatmealMedium: 'Oatmeal Pro TRIAL Medium', sans-serif;
+  --font-oatmealExtraLight: 'Oatmeal Pro TRIAL Extra Light', sans-serif;
+  --font-oatmealSemiBold: 'Oatmeal Pro TRIAL Semi Bold', sans-serif;
+  
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -114,4 +127,5 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  color: var(--foreground);
 }
