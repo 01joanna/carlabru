@@ -19,13 +19,13 @@ export default function ProjectsPage() {
     ];
 
     return (
-        <section className=" w-1/2 py-20 px-10 flex flex-col gap-20 bg-black text-white">
-            <div className="flex justify-center font-helvetica tracking-wider gap-20">
+        <section className=" w-screen py-20 px-10 flex flex-col gap-20 bg-black text-white">
+            <div className="flex justify-center font-helvetica tracking-wider gap-20 mt-20">
                 {categories.map(category => (
                     <button
                         key={category}
                         onClick={() => setFilter(category)}
-                        className={`uppercase text-xs no-underline transition ${filter === category ? "font-bold" : ""
+                        className={`uppercase text-lg font-oatmealExtraLight no-underline transition ${filter === category ? "font-oatmealMedium" : ""
                             }`}
                     >
                         {category}

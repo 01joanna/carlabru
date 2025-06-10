@@ -12,8 +12,8 @@ export default function Page() {
   return (
       <>
         <Navigation />
-      <section className="relative w-screen h-screen overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-screen -z-10">
+      <section className="relative w-screen h-screen overflow-hidden z-10">
+        <div className="absolute top-0 left-0 w-full h-screen">
           <iframe
             src="https://player.vimeo.com/video/882106664?background=1&autoplay=1&loop=1&muted=1"
             frameBorder="0"

@@ -9,7 +9,7 @@ export default function AltHeader() {
                 </ul>
             </nav>
             <a
-            href="/contact"
+            href="mailto:carla@ejemplo.com"
             className="uppercase border border-gray-400 rounded-lg px-7 py-2">Contacto</a>
         </header>
     )
