@@ -3,8 +3,8 @@ export default function Navigation() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[80vw] flex flex-col gap-20 bg-transparent text-white">
             <div className="w-1/2 flex flex-col gap-5">
                 <h1 className="font-oatmealRegular text-8xl leading-20 w-50">Carla Bru</h1>
-                <p className="font-oatmealLight w-4/5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra convallis nisi, sit amet hendrerit mi consectetur id. Nunc id.
+                <p className="font-oatmealLight w-4/5 text-xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra convallis nisi, sit amet hendrerit mi consectetur id. Nunc id. Curabitur viverra convallis nisi.
                 </p>
             </div>
             <div className="w-1/2">
