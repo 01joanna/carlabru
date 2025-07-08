@@ -35,18 +35,22 @@ export default function AltHeader() {
             </div>
 
             {/* NAV DESKTOP */}
-            <nav className="hidden lg:flex">
-                <ul className="flex gap-20 justify-end border border-gray-400 rounded-lg px-7 py-2">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/information">Información</a></li>
-                    <li><a href="/projects">Proyectos</a></li>
-                </ul>
-            </nav>
-
             {/* CONTACTO: MAIL EN DESKTOP */}
             <a
+                href="/"
+                className="hidden lg:inline uppercase"
+            >
+                Inicio
+            </a>
+            <a
+                href="/information"
+                className="hidden lg:inline uppercase"
+            >
+                Bio
+            </a>
+            <a
                 href="mailto:carla@ejemplo.com"
-                className="hidden lg:inline border border-gray-400 rounded-lg px-7 py-2 uppercase"
+                className="hidden lg:inline uppercase"
             >
                 Contacto
             </a>

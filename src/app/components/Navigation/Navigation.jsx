@@ -4,7 +4,7 @@ export default function Navigation() {
             <div className="w-1/2 flex flex-col gap-5">
                 <h1 className="font-oatmealRegular text-8xl leading-20 w-50">Carla Bru</h1>
                 <p className="font-oatmealLight w-4/5 text-xl hidden lg:flex">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra convallis nisi, sit amet hendrerit mi consectetur id. Nunc id. Curabitur viverra convallis nisi.
+                    ART DIRECTOR AND SET DECORATOR
                 </p>
             </div>
             <div className="lg:w-1/2 w-full">
