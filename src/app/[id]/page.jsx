@@ -1,4 +1,4 @@
-import proyectos from "../data/data";
+import proyectos from "../data/data.js";
 
 export default function ProyectoPage({ params }) {
     const { id } = params;
