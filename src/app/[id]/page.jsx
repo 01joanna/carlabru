@@ -1,61 +1,82 @@
-"use client"
-import React from 'react';
-import { FaArrowLeftLong } from "react-icons/fa6";
-import { projects } from "@/app/data/data.js"
+import proyectos from "../data/data";
 
-export default function Single() {
+export default function ProyectoPage({ params }) {
+    const { id } = params;
+    const proyecto = proyectos.find(p => p.id === parseInt(id));
+
+    if (!proyecto) {
+        return (
+            <div className="min-h-screen flex items-center justify-center text-white bg-black uppercase font-ltExtraLight tracking-wider">
+                <p>Proyecto no encontrado</p>
+            </div>
+        );
+    }
+
     return (
-        <section className="w-screen h-screen bg-black mt-20 flex flex-col">
-            <div className="flex w-full h-full justify-center">
-                <iframe
-                    src="https://player.vimeo.com/video/882106664"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                    className="w-[50%] h-full"
-                ></iframe>
-                <div className="w-[35%] h-screen font-oatmealLight flex flex-col justify-center px-10 overflow-y-auto">
-                    <p className="text-xl uppercase flex gap-4 items-center">
-                        <FaArrowLeftLong />
-                        <a href="/projects" className="hover:font-oatmealMedium">Volver a Proyectos</a>
-                    </p>
-                    <h1 className="text-5xl uppercase font-oatmealRegular w-full pt-20">
-                        Titulo largo para probar
-                    </h1>
-                    <h2 className="text-xl mt-4">Videoclip de Pepe pepe</h2>
-                    <h3 className="mb-10 text-2xl">2023</h3>
-                    <div className="text-md space-y-1 uppercase tracking-wider">
-                        <p>Dirección: Pepito Pepe</p>
-                        <p>Producción: Lorem Ipsum</p>
-                        <p>Dirección de fotografía: Lorem Ipsum</p>
-                        <p>Montaje: Lorem Ipsum</p>
-                        <p>Color: Lorem Ipsum</p>
-                        <p>Sonido: Lorem Ipsum</p>
+        <section className="flex flex-col bg-black text-white mt-30">
+            {/* Video + info */}
+            <div className="flex justify-between w-full px-6 sm:px-10 md:px-20 py-20">
+                <div className="flex w-full max-w-[90rem] mx-auto gap-10">
+                    {/* Video */}
+                    <div className="flex-1 aspect-video overflow-hidden">
+                        <iframe
+                            src={proyecto.video}
+                            allow="autoplay; fullscreen"
+                            allowFullScreen
+                            className="w-full h-full"
+                        ></iframe>
                     </div>
-                    <div>
-                        <p className="mt-10 text-2xl mr-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis felis id imperdiet convallis. Nullam lacinia mattis tellus, sed eleifend mauris commodo sollicitudin.
-                        </p>
+
+                    {/* Texto */}
+                    <div className="w-[30%] flex flex-col justify-end">
+                        <h1 className="text-6xl font-ltBold">{proyecto.titulo}</h1>
+                        {proyecto.by && (
+                                <p className="text-lg font-ltMedium">{proyecto.by}</p>
+                            )}
+                        <div className="flex flex-col font-ltExtraLight gap-0 text-lg mt-4">
+                            <p>{proyecto.año}</p>
+                            {proyecto.direccion && (
+                                <p>Dirección: {proyecto.direccion}</p>
+                            )}
+                            {proyecto.produccion && (
+                                <p>Producción: {proyecto.produccion}</p>
+                            )}
+
+                            {proyecto.arte && (
+                            <p>Dirección de arte: {proyecto.arte}</p>
+                            )}
+
+                            {proyecto.designer && (
+                                <p>Diseño: {proyecto.designer}</p>
+                            )}
+                                                        {proyecto.assistantArt && (
+                                <p>Asistencia de arte: {proyecto.assistantArt}</p>
+                            )}
+                            {proyecto.setDecorator && (
+                                <p>Decoración de set: {proyecto.setDecorator}</p>
+                            )}
+                            {proyecto.assistantDecorator && (
+                                <p>Asistencia de decoración: {proyecto.assistantDecorator}</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-6 px-10 py-20'>
-                {projects
-                    .filter((project) => project.id === 3)
-                    .flatMap((project) =>
-                        project.images.map((image, imgIndex) => (
-                            <div key={`${project.id}-${imgIndex}`} className="w-full h-auto relative">
-                                <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                        ))
-                    )
-                }
-            </div>
 
-        </section >
-    )
+            {/* Galería si hay imágenes */}
+            {proyecto.imagenes?.length > 0 && (
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-10 pb-20">
+                    {proyecto.imagenes.map((img, i) => (
+                        <div key={i} className="overflow-hidden">
+                            <img
+                                src={img}
+                                alt={`Imagen ${i + 1} del proyecto ${proyecto.titulo}`}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    ))}
+                </div>
+            )}
+        </section>
+    );
 }

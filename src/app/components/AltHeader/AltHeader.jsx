@@ -25,8 +25,8 @@ export default function AltHeader() {
     }, [isOpen]);
 
     return (
-        <header className="absolute top-0 right-0 lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 z-20 w-screen h-auto text-md font-oatmealLight uppercase tracking-wider flex mt-14 bg-transparent text-white lg:mx-0 mx-10 justify-around">
-            
+        <header className="fixed top-0 right-0 lg:left-1/2 lg:-translate-x-1/2 z-50 w-screen h-auto text-md font-oatmealLight uppercase tracking-wider flex mt-6 bg-transparent text-white lg:mx-0 mx-10 justify-around">
+
             {/* Título solo en móvil */}
             <div className="lg:hidden flex items-center justify-around w-auto">
                 <span className="pl-20 text-white font-oatmealLight tracking-wider text-2xl uppercase">
