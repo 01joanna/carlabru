@@ -1,4 +1,4 @@
-import { proyectos } from "../../data/data.js";
+import proyectos from "../../data/data.js";
 
 export default function ProyectoPage({ params }) {
     const { id } = params;
@@ -9,9 +9,10 @@ export default function ProyectoPage({ params }) {
                 <p>Proyecto no encontrado</p>
             </div>
         );
-    }
+    }   
 
     return (
+        {Array.isArray(proyectos) && proyectos.map((proyecto, i) => (
         <section className="flex flex-col bg-black text-white mt-30">
             {/* Video + info */}
             <div className="flex justify-between w-full px-6 sm:px-10 md:px-20 py-20">
@@ -77,5 +78,6 @@ export default function ProyectoPage({ params }) {
                 </div>
             )}
         </section>
+        ))}
     );
 }
