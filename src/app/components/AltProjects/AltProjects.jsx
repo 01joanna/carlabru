@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { projects } from "../../../data/data.js"
+import { projects } from "../../../data/proyectos.js"
 import Image from "next/image"
 
 export default function AltProjects(second) {

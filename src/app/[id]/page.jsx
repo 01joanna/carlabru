@@ -1,18 +1,22 @@
-import proyectos from "../../data/data.js";
+import proyectos from "../../data/proyectos";
 
 export default function ProyectoPage({ params }) {
     const { id } = params;
     const proyecto = proyectos.find(p => p.id === parseInt(id));
+
+    console.log("ID del proyecto:", id);
+    console.log("Proyecto encontrado:", proyecto);
+    console.log("Todos los proyectos:", proyectos);
+
     if (!proyecto) {
         return (
             <div className="min-h-screen flex items-center justify-center text-white bg-black uppercase font-ltExtraLight tracking-wider">
                 <p>Proyecto no encontrado</p>
             </div>
         );
-    }   
+    }
 
     return (
-        {Array.isArray(proyectos) && proyectos.map((proyecto, i) => (
         <section className="flex flex-col bg-black text-white mt-30">
             {/* Video + info */}
             <div className="flex justify-between w-full px-6 sm:px-10 md:px-20 py-20">
@@ -30,34 +34,16 @@ export default function ProyectoPage({ params }) {
                     {/* Texto */}
                     <div className="w-[30%] flex flex-col justify-end">
                         <h1 className="text-6xl font-ltBold">{proyecto.titulo}</h1>
-                        {proyecto.by && (
-                                <p className="text-lg font-ltMedium">{proyecto.by}</p>
-                            )}
+                        {proyecto.by && <p className="text-lg font-ltMedium">{proyecto.by}</p>}
                         <div className="flex flex-col font-ltExtraLight gap-0 text-lg mt-4">
                             <p>{proyecto.año}</p>
-                            {proyecto.direccion && (
-                                <p>Dirección: {proyecto.direccion}</p>
-                            )}
-                            {proyecto.produccion && (
-                                <p>Producción: {proyecto.produccion}</p>
-                            )}
-
-                            {proyecto.arte && (
-                            <p>Dirección de arte: {proyecto.arte}</p>
-                            )}
-
-                            {proyecto.designer && (
-                                <p>Diseño: {proyecto.designer}</p>
-                            )}
-                                                        {proyecto.assistantArt && (
-                                <p>Asistencia de arte: {proyecto.assistantArt}</p>
-                            )}
-                            {proyecto.setDecorator && (
-                                <p>Decoración de set: {proyecto.setDecorator}</p>
-                            )}
-                            {proyecto.assistantDecorator && (
-                                <p>Asistencia de decoración: {proyecto.assistantDecorator}</p>
-                            )}
+                            {proyecto.direccion && <p>Dirección: {proyecto.direccion}</p>}
+                            {proyecto.produccion && <p>Producción: {proyecto.produccion}</p>}
+                            {proyecto.arte && <p>Dirección de arte: {proyecto.arte}</p>}
+                            {proyecto.designer && <p>Diseño: {proyecto.designer}</p>}
+                            {proyecto.assistantArt && <p>Asistencia de arte: {proyecto.assistantArt}</p>}
+                            {proyecto.setDecorator && <p>Decoración de set: {proyecto.setDecorator}</p>}
+                            {proyecto.assistantDecorator && <p>Asistencia de decoración: {proyecto.assistantDecorator}</p>}
                         </div>
                     </div>
                 </div>
@@ -78,6 +64,5 @@ export default function ProyectoPage({ params }) {
                 </div>
             )}
         </section>
-        ))}
     );
 }
