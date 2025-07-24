@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "../../data/data.js";
+import { projects } from "../../../data/data.js";
 
 export default function ProjectIntro() {
     return (

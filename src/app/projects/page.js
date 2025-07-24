@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
-import { projects } from "../data/data.js";
+import { projects } from "../../data/data.js";
 import Link  from "next/link"
 import { motion, AnimatePresence } from "framer-motion";
 

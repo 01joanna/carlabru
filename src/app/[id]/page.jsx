@@ -1,9 +1,8 @@
-import proyectos from "../data/data.js";
+import { proyectos } from "../../data/data.js";
 
 export default function ProyectoPage({ params }) {
     const { id } = params;
     const proyecto = proyectos.find(p => p.id === parseInt(id));
-
     if (!proyecto) {
         return (
             <div className="min-h-screen flex items-center justify-center text-white bg-black uppercase font-ltExtraLight tracking-wider">
